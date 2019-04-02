@@ -7,5 +7,5 @@ import { environment } from 'src/environments/environment';
   styles: []
 })
 export class AppComponent {
-  title = environment.appName + ' Hello world';
+  title = environment.appName + ' sadsadsdaHello world';
 }
