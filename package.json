@@ -11,6 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:pub": "ng build --prod --output-path docs --base-href https://arodote.github.io/Angular/",
+    "build:pubnp": "ng build --output-path docs --base-href https://arodote.github.io/Angular/",
     "http-server": "http-server ./dist/angular-board/ -c-1 -p4271 -a localhost -o",
     "pub": "npm run build:pub && npm run push",
     "push": "git add * && git commit -m 'pub' && git push"
