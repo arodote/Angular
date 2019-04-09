@@ -1,4 +1,16 @@
-<div style="text-align:center">
-  <h1>Welcome to {{ title }}!</h1>
-  <img width="100" src="./assets/Imagen vehiculo.jpg" />
-</div>
+<header class="sticky">
+  <a routerLink="/" class="logo">
+    <span class="icon-home"></span> <span>{{ title }}</span>
+  </a>
+  <a routerLink="heroes" routerLinkActive="router-link-active" class="button">
+    <span> Heroes</span>
+  </a>
+  <a routerLink="about" routerLinkActive="router-link-active" class="button">
+    <img
+      width="32"
+      style="vertical-align: -0.5em"
+      src="./assets/Imagen vehiculo.jpg"
+    />
+    <span> About</span>
+  </a>
+</header>

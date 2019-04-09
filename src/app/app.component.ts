@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { Component } from "@angular/core";
+import { environment } from "src/environments/environment";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: "app-root",
+  templateUrl: "./app.component.html",
   styles: []
 })
-export class AppComponent {
-
-}
+export class AppComponent {}

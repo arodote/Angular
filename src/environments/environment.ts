@@ -1,11 +1,11 @@
-import { BrowserDomAdapter } from '@angular/platform-browser/src/browser/browser_adapter';
+import { BrowserDomAdapter } from "@angular/platform-browser/src/browser/browser_adapter";
 
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  appName: 'Angular-Board',
+  appName: "Angular-Board",
   production: false
 };
 
