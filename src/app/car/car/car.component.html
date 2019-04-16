@@ -1,0 +1,14 @@
+<app-display
+  [model]="car.name"
+  [currentSpeed]="car.currentSpeed"
+  [topSpeed]="car.maxSpeed"
+  [units]="'Km/h'"
+>
+</app-display>
+<app-pedals
+  (brake)="onBrake($event)"
+  [disableBrake]="disableBrake"
+  (throttle)="onThrottle($event)"
+  [disableThrottle]="disableThrottle"
+>
+</app-pedals>

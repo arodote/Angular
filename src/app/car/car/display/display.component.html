@@ -1,0 +1,11 @@
+<h2> {{ model }} </h2>
+<h3> Top speed: {{ topSpeed | number:'1.0-0' }}</h3>
+<div class="card">
+ <div class="section">
+ {{ currentSpeed | number:'1.2-2' }} {{ units }}
+ </div>
+ <progress [value]="currentSpeed"
+ [ngClass]="getSpeedClass()"
+ [max]="topSpeed">
+ </progress>
+</div>
