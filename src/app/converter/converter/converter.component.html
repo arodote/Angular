@@ -1,0 +1,17 @@
+<h2> Distance Converter.</h2>
+<h3> From Europe to USA </h3>
+<form>
+ <fieldset>
+ <section>
+ <label for="kilometers">Kilometers</label>
+ <input name="kilometers"
+ type="number"
+ [(ngModel)]="kilometers"
+ placeholder="0" />
+ </section>
+ </fieldset>
+ <input value="Convert" type="button" (click)="convert()">
+</form>
+<section>
+ <h4>{{ miles | number:'1.2-2' }} miles</h4>
+</section>

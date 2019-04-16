@@ -1,0 +1,17 @@
+<h2> Culture Converter.</h2>
+<h3> From {{ source }} to {{ target }} </h3>
+<form>
+ <fieldset>
+ <section>
+ <label for="sourceUnits">Distance</label>
+ <input name="sourceUnits"
+ type="number"
+ [(ngModel)]="sourceUnits"
+ placeholder="0" />
+ </section>
+ </fieldset>
+ <input value="Convert" type="button" (click)="convert()">
+</form>
+<section>
+ <h4>Distance {{ targetUnits | number:'1.2-2' }} </h4>
+</section>

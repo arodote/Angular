@@ -6,7 +6,8 @@ import { BrowserDomAdapter } from "@angular/platform-browser/src/browser/browser
 
 export const environment = {
   appName: "Angular-Board",
-  production: false
+  production: false,
+  unitsCulture: 'metric'
 };
 
 /*

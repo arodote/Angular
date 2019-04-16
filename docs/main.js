@@ -18,7 +18,13 @@ var map = {
 	],
 	"./contacts/contacts.module": [
 		"./src/app/contacts/contacts.module.ts",
+		"default~contacts-contacts-module~converter-converter-module",
 		"contacts-contacts-module"
+	],
+	"./converter/converter.module": [
+		"./src/app/converter/converter.module.ts",
+		"default~contacts-contacts-module~converter-converter-module",
+		"converter-converter-module"
 	],
 	"./home/home.module": [
 		"./src/app/home/home.module.ts",
@@ -34,7 +40,7 @@ function webpackAsyncContext(req) {
 			throw e;
 		});
 	}
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		var id = ids[0];
 		return __webpack_require__(id);
 	});
@@ -85,8 +91,12 @@ var routes = [
         loadChildren: "./contacts/contacts.module#ContactsModule"
     },
     {
-        path: 'car',
-        loadChildren: './car/car.module#CarModule'
+        path: "converter",
+        loadChildren: "./converter/converter.module#ConverterModule"
+    },
+    {
+        path: "car",
+        loadChildren: "./car/car.module#CarModule"
     },
     {
         path: "not-found",
@@ -342,7 +352,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"sticky\">\n  <a routerLink=\"/\" class=\"logo\">\n    <span class=\"icon-home\"></span> <span>{{ title }}</span>\n  </a>\n  <a routerLink=\"heroes\" routerLinkActive=\"router-link-active\" class=\"button\">\n    <span> Heroes</span>\n  </a>\n  <a routerLink=\"contacts\" class=\"button\">\n    <span> Contacts</span>\n  </a>\n  <a routerLink=\"car\" routerLinkActive=\"router-link-active\" class=\"button\">\n    <span>Car</span>\n   </a>\n  <a routerLink=\"about\" routerLinkActive=\"router-link-active\" class=\"button\">\n    <img\n      width=\"32\"\n      style=\"vertical-align: -0.5em\"\n      src=\"./assets/Imagen vehiculo.jpg\"\n    />\n    <span> About</span>\n  </a>\n</header>\n"
+module.exports = "<header class=\"sticky\">\n  <a routerLink=\"/\" class=\"logo\">\n    <span class=\"icon-home\"></span> <span>{{ title }}</span>\n  </a>\n  <a routerLink=\"heroes\" routerLinkActive=\"router-link-active\" class=\"button\">\n    <span> Heroes</span>\n  </a>\n  <a routerLink=\"contacts\" class=\"button\">\n    <span> Contacts</span>\n  </a>\n  <a routerLink=\"car\" routerLinkActive=\"router-link-active\" class=\"button\">\n    <span>Car</span>\n   </a>\n   <a routerLink=\"converter\" routerLinkActive=\"router-link-active\" class=\"button\">\n    <span>Converter</span>\n   </a>\n  <a routerLink=\"about\" routerLinkActive=\"router-link-active\" class=\"button\">\n    <img\n      width=\"32\"\n      style=\"vertical-align: -0.5em\"\n      src=\"./assets/Imagen vehiculo.jpg\"\n    />\n    <span> About</span>\n  </a>\n</header>\n"
 
 /***/ }),
 
@@ -528,7 +538,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     appName: "Angular-Board",
-    production: false
+    production: false,
+    unitsCulture: 'metric'
 };
 /*
  * For easier debugging in development mode, you can import the following file
